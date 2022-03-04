@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables with strict</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let cat = 'black';
+        console.log(cat);
+
+        let _manager = 'John';
+        let $city = 'Chennai';
+        let $_$ = 400;
+        console.log(`Manager:${_manager}`);
+        console.log(`City:${$city}`);
+        console.log(`$_$:${$_$}`);
+
+        // let #_$ = 400;
+        // console.log(`#_$: ${#_$}`);
+
+        // camel case
+        const iLovePizza = true;
+        console.log(`iLovePizza:${iLovePizza}`);
+        // UpperCamelCase..
+        const ILoveToEatHotDogs = false;
+        console.log(`ILoveToEatHotDogs: ${ILoveToEatHotDogs}`);
+        // snake case..
+        const this_is_snake_case = 'cool';
+        console.log(`this_is_snake_case: ${this_is_snake_case}`);
+        // kebab case - not allowed in variables
+        // const this-is-kebab-case ='hot' ;
+        // console.log(`this-is-kebab-case:${this_is_kebab-case}`);
+
+        const dog = 'Golden Retriever' ;
+        console.log(`Dog: ${dog}`);
+        // dog='bull';
+    </script>
+</body>
+</html>

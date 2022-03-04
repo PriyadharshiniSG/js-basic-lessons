@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML</title>
+</head>
+
+<body>
+    <div id="feedback" style="background-color: yellow;" onclick="greetings()">
+        Users without Javascript will see this.
+    </div>
+    <p>
+        <buuton onclick="goodbye()">Submit</buuton>
+    </p>
+    <script type="text/javascript">
+        document.getElementById('feedback').innerHTML = 'Hello World!';
+        function goodbye() {
+            document.getElementById('feedback').innerHTML = 'Goodbye World!';
+        }
+        function greetings() {
+            document.getElementById('feedback').innerHTML = 'Greeting All!!!';
+        }
+    </script>
+</body>
+
+</html>
