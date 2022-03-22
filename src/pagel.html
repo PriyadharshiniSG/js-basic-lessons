@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form using JS</title>
 </head>
+
 <body>
     <form name="myForm" action="pagek.html">
-        <p>Name: <input placeholder="Enter name" type="text" 
-            name="name" size="30"></p>
-        <p>Email: <input placeholder="Enter email address" type="email" 
-            name="email" size="30"></p>
-        <p>Age: <input placeholder="Enter age" type="text" 
-            name="age" size="5" value="0"></p>
+        <p>Name: <input placeholder="Enter name" type="text" name="name" size="30"></p>
+        <p>Email: <input placeholder="Enter email address" type="email" name="email" size="30"></p>
+        <p>Age: <input placeholder="Enter age" type="text" name="age" size="5" value="0"></p>
         <p>Job: <select name="job" title="joblist">
-            <option >--- select one ---
-            <option value="student">Student</option>
-            <option value="businessperson">Business Person</option>
+                <option>--- select one ---
+                <option value="student">Student</option>
+                <option value="businessperson">Business Person</option>
             </select>
         </p>
-        <p><input type="submit" value="send!" onClick="checkForm(); return false;"></p>
+        <p><input type="submit" value="send!" onClick="checkForm();"></p>
         <p><button type="button" onClick="openWindow()" value="Go">B1</button></p>
-    </form>  
+    </form>
     <script type="text/javascript">
         function checkForm() {
             var formName = document.myForm.name;
@@ -34,14 +33,14 @@
                 formName.focus();
                 return;
             }
-            if (formEmail.value.indexOf("@") == -1 || 
-            formEmail.value.indexOf(".") == -1) {
+            if (formEmail.value.indexOf("@") == -1 ||
+                formEmail.value.indexOf(".") == -1) {
                 alert("Please enter your valid e-mail address.");
                 formEmail.focus();
                 return;
             }
             let formAgeValue = parseInt(formAge.value);
-            if(!(formAgeValue > 0)) {
+            if (!(formAgeValue > 0)) {
                 alert("Please enter your age as a valid number.");
                 formAge.focus();
                 return;
@@ -51,7 +50,7 @@
                 formAge.focus();
                 return;
             }
-            if(formJob.selectedIndex == 0) {
+            if (formJob.selectedIndex == 0) {
                 alert("Please select your job from the list.");
                 formJob.focus();
                 return;
@@ -61,6 +60,7 @@
         function openWindow() {
             myWindow = window.open("pagek.html", "Page2", "height=300, weight=400");
         }
-    </script>  
+    </script>
 </body>
+
 </html>

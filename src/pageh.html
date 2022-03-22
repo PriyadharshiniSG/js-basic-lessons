@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variables Scope</title>
 </head>
+
 <body>
     <script type="text/javascript">
-        var vGlobal = 'this is global' ;
-        function scopeFunction () {
-            alsoGlobal = 'This is also global variable' ;
-            var vNotGlobal = 'This is private and scoped to the function ' ;
+        var vGlobal = 'this is global';
+        function scopeFunction() {
+            alsoGlobal = 'This is also global variable';
+            var vNotGlobal = 'This is private and scoped to the function ';
             function subFunction() {
                 console.log(`Inside subFunction: ${vNotGlobal}`);
-                stillGlobal = 'No var keyword so this is global' ;
+                stillGlobal = 'No var keyword so this is global';
                 var isPrivate = 'This is private to subFunction';
             }
             subFunction();
             // console.log(isPrivate);
         }
-        console.log(vGlobal) ;
+        console.log(vGlobal);
         // console.log(alsoGlobal);
         scopeFunction();
         console.log(alsoGlobal);
@@ -28,4 +30,5 @@
         console.log(stillGlobal);
     </script>
 </body>
+
 </html>

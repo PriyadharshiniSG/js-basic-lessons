@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="max"></div>
     <p></p>
     <div id="min"></div>
     <script type="text/javascript">
-        document.getElementById('max').innerHTML=`Max:${Number.MAX_VALUE}`;
-        document.getElementById('min').innerHTML=`Min:${Number.MIN_VALUE}`;
+        document.getElementById('max').innerHTML = `Max:${Number.MAX_VALUE}`;
+        document.getElementById('min').innerHTML = `Min:${Number.MIN_VALUE}`;
         const x = 100;
         let s1 = 'Hello';
-        let result = x / s1 ;
+        let result = x / s1;
         document.writeln(`<p>result ${result}</p>`);// s1 - not a number
-        document.writeln(`<p>isNaN(x/s1) ${isNaN(x/s1)}</p>`);
+        document.writeln(`<p>isNaN(x/s1) ${isNaN(x / s1)}</p>`);
 
         const y = 0;
         const z = x / y;
@@ -39,4 +41,5 @@
         checkNull_Undefined(s2);
     </script>
 </body>
+
 </html>
