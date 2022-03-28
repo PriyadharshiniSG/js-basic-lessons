@@ -1,0 +1,160 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url('.../pattern-curve.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 10%;
+  color: hsl(240, 38%, 20%);
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 2vh;
+  font-weight: 300;
+  height: 90vh;
+  position: relative;
+  text-align: center;
+}
+.photo {
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+  height: auto;
+  width: 70vw;
+}
+div.photo-wrap {
+  background-image: url('../images/pattern-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  position: relative;
+}
+.nav {
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: float;
+  left: 40%;
+  padding: 13px 10px;
+  position: absolute;
+  top: 85%;
+}
+.nav > * {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  display: inline;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  user-select: none;
+
+  /* iOS Safari */
+  /* Safari */
+  /* Konqueror HTML */
+  /* Old versions of Firefox */
+  /* Internet Explorer/Edge */
+}
+.prev {
+  padding-right: 12px;
+}
+.next {
+  padding-left: 12px;
+}
+div.testimonial {
+  background-image: url('../images/pattern-quotes.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 10%;
+}
+.quote {
+  display: block;
+  padding: 3vh;
+}
+.name {
+  display: block;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.role {
+  color: hsl(240, 18%, 77%);
+  display: block;
+}
+.attribution {
+  bottom: 0px;
+  flex-shrink: 0;
+  font-size: xx-small;
+  margin-top: auto;
+  min-width: 100vw;
+  padding-top: 50px;
+  position: fixed;
+  text-align: center;
+}
+@media all and (min-width: 600px) {
+  .photo {
+    width: 50vh;
+  }
+  body {
+    display: inline;
+    font-size: 3vh;
+  }
+  .attribution {
+    position: static;
+  }
+}
+@media all and (min-width: 1000px) {
+  body {
+    font-size: 25px;
+    text-align: left;
+  }
+  .wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .photo {
+    position: relative;
+    right: 50px;
+    width: 35vw;
+  }
+  div.photo-wrap {
+    padding: 5%;
+  }
+  .quote {
+    left: 10vw;
+    position: relative;
+    width: 40vw;
+  }
+  div.person {
+    display: flex;
+    font-size: 20px;
+    justify-content: flex-start;
+    left: 10vw;
+    min-width: 40vw;
+    padding-left: 3vh;
+    position: relative;
+  }
+  div.person > * {
+    padding-right: 1vw;
+  }
+  .nav {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: float;
+    left: 15%;
+    padding: 13px 10px;
+    position: absolute;
+    top: 85%;
+  }
+}

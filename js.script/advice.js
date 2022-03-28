@@ -1,6 +1,12 @@
-/* eslint-disable semi */
-/* eslint-disable no-unused-vars */
-/* eslint-disable quotes */
-const adviceBtn = document.querySelector(".advice-btn");
-const adviceId = document.querySelector(".advice-Id");
-const advicetext = document.querySelector(".advice-text");
+
+const retrieveAdvice = async () => {
+    const res = await fetch("https://api.adviceslip.com/advice");
+    const data = await res.json();
+  
+    console.log(data);
+  
+    document.getElementById("advice-title").innerHTML = `Advice #${data.slip.id}`;
+    document.getElementById("advice-text").innerHTML = `"${data.slip.advice}"`;
+  }
+  
+  retrieveAdvice()

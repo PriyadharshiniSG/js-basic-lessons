@@ -1,63 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTC+1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../themes/article.css" type="text/css" />
+    <title>Article Preview Component</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../themes/article.css">
-
-  <title>Article preview component</title>
-</head>
-
-<body>
-  <div class="body">
-    <img src="../images/drawers.jpg" width="300px">
-    <div class="text">
-      <div class="heading">
-        Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home
+  <body>
+    <div class="parent-container">
+      <div class="img-container">
+        <img src="../images/drawers.jpg" alt="drawers" />
       </div>
-      <div class="sub-text">
-        Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I've got some simple tips
-        to help you make any room feel complete.
-      </div>
-
-      <div class="person">
-        <div class="images">
-          <img src="../images/avatar-michelle.jpg" alt="" width="40px">
-          <div class="name">
-            <p> Michelle Appleton</p>
+      <article class="text-container">
+        <h1>
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home.
+        </h1>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and univinting. I've got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="sub-text">
+          <img
+            id="headshot"
+            src="../images/avatar-michelle.jpg"
+            alt="headshot of Michelle"
+            width="35px"
+            height="35px"
+          />
+          <div class="text">
+            <p id="name">Michelle Appleton</p>
             <p>28 Jun 2020</p>
           </div>
+          <img id="img" src="../images/icon-share.png" alt="Share Icon" />
+          <a class="share-btn">
+            <section class="pop-up hidden">
+              <div class="popup-style">
+                <p>SHARE</p>
+                <img
+                  class="icon"
+                  id="facebook-icon"
+                  src="../images/icon-facebook.png"
+                  alt="facebook-icon"
+                />
+                <img
+                  class="icon"
+                  id="twitter-icon"
+                  src="../images/icon-twitter.png"
+                  alt="bird-icon"
+                />
+                <img
+                  class="icon"
+                  id="pinterest-icon"
+                  src="../images/icon-pinterest.png"
+                  alt="pinterest-icon"
+                />
+              </div>
+            </section>
+          </a>
+          <div class="overlay"></div>
         </div>
-
-        <button class="button">
-          <img src="../images/icon-share.png">
-        </button>
-        <!-- <button id="buttonClose">
-          <img src="../images/icon-share.png">
-        </button> -->
-      </div>
-      <!-- <div class="share">
-        Share
-        <div class="share-svg">
-          <img src="../images/icon-facebook.png">
-          <img src="../images/icon-twitter.png">
-          <img src="../images/icon-pinterest.png">
-          
-        </div>
-        <button class="buttonCloseone">
-          <img src="../images/icon-share.png">
-        </button>
-        <div class="triangle">
-
-        </div> -->
+      </article>
     </div>
-  </div>
-  </div>
-  <script src="article.js"></script>
-
-</body>
-
+    <script src="../js.script/article.js"></script>
+  </body>
 </html>

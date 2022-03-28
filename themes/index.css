@@ -1,0 +1,23 @@
+body {
+  background: #101010;
+  border-radius: 17px;
+  margin: 0 1em;
+  text-align: center;
+}
+h2 {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 55px;
+  margin: 20px 0px 20px;
+}
+a:link {
+  color: #fcfc;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:visited {
+  color: whitesmoke;
+}
+a:hover {
+  border: 2px solid #f9004d;
+}

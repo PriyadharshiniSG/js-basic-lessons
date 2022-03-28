@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Lightorange: hsl(15, 100%, 70%);
+  --Softblue: hsl(195, 74%, 62%);
+  --Lightred: hsl(348, 100%, 68%);
+  --Limegreen: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Softorange: hsl(43, 84%, 65%);
+
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--Verydarkblue);
+  display: grid;
+  place-items: center;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  height: 100vh;
+}
+@keyframes smooth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: var(--Darkblue);
+  margin: 1rem;
+  border-radius: 15px;
+  width: 100%;
+  position: relative;
+}
+.upper--container {
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+}
+.downward--container {
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  transition: 400ms ease-in-out;
+}
+.inner--container .upper--container {
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-position: 92% center;
+  background-repeat: no-repeat;
+  background-size: 20%;
+}
+.inner--container .downward--container {
+  position: relative;
+  margin-top: -1rem;
+  z-index: 5;
+  background-color: inherit;
+}
+.downward--container .up,
+.downward--container .down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.time {
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+.hrs-current {
+  animation: smooth 1s ease;
+}
+.last {
+  transition: 300ms ease-in-out;
+  animation: smooth 1s ease;
+}
+.fade {
+  opacity: 1;
+  transition: opacity 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.up-1 {
+  background-color: var(--Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user--photo img {
+  max-height: 70px;
+  max-width: 70px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.dw-1 .time ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.dw-1 .time ul li {
+  color: var(--PaleBlue);
+}
+.dw-1 .time ul li:nth-child(2) {
+  color: white;
+}
+h1 {
+  font-weight: 300;
+}
+.inner .downward--container {
+  min-height: 101px;
+  max-height: 101px;
+}
+
+.up-2 {
+  background-color: var(--Lightorange);
+  background-image: url(../images/icon-work.png);
+}
+
+.up-3 {
+  background-color: var(--Softblue);
+  background-image: url(../images/icon-play.png);
+}
+
+.up-4 {
+  background-color: var(--Lightred);
+  background-image: url(../images/icon-study.png);
+}
+
+.up-5 {
+  background-color: var(--Limegreen);
+  background-image: url(../images/icon-exercise.png);
+}
+
+.up-6 {
+  background-color: var(--Violet);
+  background-image: url(../images/icon-social.png);
+}
+
+.up-7 {
+  background-color: var(--Softorange);
+  background-image: url(../images/icon-self-care.png);
+}
+
+@media (min-width: 852px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+  }
+  .container {
+    width: 240px;
+  }
+  .hrs-current {
+    font-size: 2.7rem;
+    padding: 0.5rem 0;
+  }
+  .activities .downward--container {
+    min-height: 167px;
+    max-height: 167px;
+  }
+  .downward--container .down {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .activities .downward--container:hover {
+    background-color: var(--Desaturatedblue);
+  }
+  .dw-1:hover {
+    background-color: var(--Darkblue);
+  }
+
+  .up-1 {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1;
+    height: 70%;
+  }
+  .user--photo {
+    padding-bottom: 1rem;
+  }
+  .user--info {
+    padding: 1rem 0;
+  }
+  .user--info h1 {
+    font-size: 2.5rem;
+  }
+  .user--photo img {
+    max-height: 70px;
+    max-width: 70px;
+    margin-right: 0;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  .dw-1 {
+    height: 30%;
+  }
+  .dw-1 .time ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .dw-1 .time ul li {
+    color: var(--PaleBlue);
+  }
+  .dw-1 .time ul li:nth-child(2) {
+    padding: 1rem 0;
+  }
+  h1 {
+    font-weight: 300;
+  }
+  .active {
+    color: white !important;
+  }
+  .pale {
+    color: var(--PaleBlue);
+  }
+}

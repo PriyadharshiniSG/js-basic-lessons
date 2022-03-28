@@ -1,70 +1,73 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    text-transform: capitalize;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: capitalize;
+}
 html {
-    font-size: 62.5%;
-  }
+  font-size: 62.5%;
+}
 body {
-    font-family: 'Monorope', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 800;
-  }
+  font-family: 'Monorope', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
 .main {
-    align-items: center;
-    background-color: hsl(217, 19%, 38%);
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    width: 100%;
-  }
+  align-items: center;
+  background-color: hsl(217, 19%, 38%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
 .advice {
-    background-color: hsl(217, 19%, 24%);
-    border-radius: 2rem;
-    max-width: 55rem;
-    padding: 3rem;
-    position: relative;
-    text-align: center;
-    width: 90%;
-  }
-.advice-title {
-    color: hsl(150, 100%, 66%);
-    font-size: 1.6rem;
-    letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
-  }
-.advice-text {
-    color: hsl(193, 38%, 86%);
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-  }
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 2rem;
+  max-width: 55rem;
+  padding: 3rem;
+  position: relative;
+  text-align: center;
+  width: 90%;
+}
+#advice-title {
+  color: hsl(150, 100%, 66%);
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+}
+#advice-text {
+  color: hsl(193, 38%, 86%);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
 .advice-line img {
-    margin-bottom: 2rem;
-    width: 100%;
-  }
+  margin-bottom: 2rem;
+  width: 100%;
+}
 .advice-btn {
-    background-color: hsl(150, 100%, 66%);
-    border-radius: 100%;
-    bottom: -2rem;
-    cursor: pointer;
-    height: 4rem;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    transition: all 0.3s;
-    width: 4rem;
-  }
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 52%;
+  border: none;
+  bottom: -2rem;
+  cursor: pointer;
+  height: 7rem;
+  left: 50%;
+  padding: 1.25rem;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: 0.5s linear;
+  width: 7rem;
+}
 .advice-btn:hover {
-    box-shadow: rgba(82, 255, 169, 0.466) 0px 8px 24px,
-
-    rgba (82, 255, 169, 0.411) 0px 16px 56px,
-    rgba (82, 255, 169, 0.479) 0px 24px 80px;
-  }
+  box-shadow: rgba(82, 255, 169, 0.466) 0px 8px 24px,
+    rgba(82, 255, 169, 0.411) 0px 16px 56px,
+    rgba(82, 255, 169, 0.479) 0px 24px 80px;
+}
 .advice-btn img {
-    height: 100%;
-    transform: scale(0.5);
-    width: 100%;
-  }
+  height: 100%;
+  transform: scale(1.7);
+  position: center;
+  max-width: 100%;
+  margin-top: 8px;
+}
