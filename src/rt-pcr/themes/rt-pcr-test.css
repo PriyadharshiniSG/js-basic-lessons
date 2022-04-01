@@ -64,7 +64,7 @@ label {
   grid-template-columns: max-content max-content;
   grid-gap: 5px;
 } */
-#search {
+.search {
   margin-bottom: 40px;
   margin-top: 10px;
   text-align: center;
