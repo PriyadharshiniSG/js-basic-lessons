@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RT-PCR Test</title>
-    <link rel="stylesheet" href="./themes/rt-pcr-test.css" />
+    <link rel="stylesheet" href="../themes/rt-pcr-test.css" />
   </head>
   <body>
     <h1>RT-PCR Online Application</h1><hr/>
@@ -84,8 +84,11 @@
       </p>
       <p >
         <label>Result:</label>  
-        <input type="radio" name="result" id="result" />Positive
-        <input type="radio" name="result" id="result" />Negative
+        <select name="Result" id="result">
+          <option value="none" selected>Result</option>
+          <option value="+ve">Positive</option>
+          <option value="-ve">Negative</option>
+        </select>
       </p>
       <div>
         <button type="reset">Clear</button>
@@ -129,6 +132,6 @@
         <th>Result</th>
       </tr>
     </table></p>
-    <script src="./script/rt-pcr.js" type="module"></script>
+    <script src="../js.script/rt-pcr.js" type="module"></script>
   </body>
 </html>

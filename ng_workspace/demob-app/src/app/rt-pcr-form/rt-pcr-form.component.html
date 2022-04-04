@@ -1,0 +1,246 @@
+<div class="data">
+  <h1>RT-PCR Online Application</h1>
+  <form class="form" [formGroup]="fg" (ngSubmit)="onSubmit()">
+    <p class="cells">
+      <label
+        >Person:
+        <input
+          type="text"
+          placeholder="enter the person name"
+          id="name"
+          formControlName="name"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span *ngIf="fg.controls['name'].invalid && fg.controls['name'].touched"
+        >!!---Name is required--!!</span
+      >
+    </div>
+    <p class="cells">
+      <label
+        >Aadhar number:
+        <input
+          type="text"
+          placeholder="enter Aadharcard number"
+          id="aadhar"
+          formControlName="aadhar"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span
+        *ngIf="fg.controls['aadhar'].invalid && fg.controls['aadhar'].touched"
+        >!!---Aadharnumber is required--!!</span
+      >
+    </div>
+    <p class="cells">
+      <label
+        >Date of Birth:
+        <input
+          type="date"
+          placeholder="enter your DOB"
+          id="dob"
+          formControlName="dob"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span *ngIf="fg.controls['dob'].invalid && fg.controls['dob'].touched"
+        >!!---dob is required--!!</span
+      >
+    </div>
+    <!-- <p class="cells">
+      <label
+        >City:
+        <select name="City" id="sts" formControlName="city">
+          <option value="" selected>Select a city</option>
+          <option value="">Chennai</option>
+          <option value="">Madurai</option>
+          <option value="">Erode</option>
+          <option value="">Coimbatore</option>
+          <option value="">Ooty</option>
+          <option value="">Tenkasi</option>
+          <option value="">Tirunelveli</option>
+          <option value="">Kerala</option>
+          <option value="">Thoothukudi</option>
+        </select>
+      </label>
+    </p>
+    <div class="valid">
+      <span *ngIf="fg.controls['city'].invalid && fg.controls['city'].touched"
+        >!!---City is required--!!</span
+      >
+    </div> -->
+    <!-- <p>
+      <label>city :</label>
+       <label class="city" formControlName="city">City</label> -->
+    <!-- <select [(ngModel)]="selectedValue">
+        <option *ngFor="let c of countries" [ngValue]="c">{{ c.name }}</option>
+        <p>Selected Country: {{ selectedCountry?.name }}</p>
+      </select>
+    </p> -->
+    <p [formGroup]="form">
+      City:
+      <select formControlName="country">
+        <option *ngFor="let country of countries" [ngValue]="country">
+          {{ country.name }}
+        </option>
+      </select>
+    </p>
+    <!-- <p class="cells">
+      <label
+        >City:
+        <input
+          type="text"
+          placeholder="enter your city"
+          id="country"
+          formControlName="country"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span *ngIf="fg.controls['country'].invalid && fg.controls['country'].touched"
+        >!!---city is required--!!</span
+      > -->
+    <p class="cells">
+      <label
+        >Date and time of Test:
+        <input
+          type="datetime-local"
+          placeholder="enter your test date and time"
+          id="datetime"
+          formControlName="datetime"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span
+        *ngIf="
+          fg.controls['datetime'].invalid && fg.controls['datetime'].touched
+        "
+        >!!---Datetime is required--!!</span
+      >
+    </div>
+    <p class="cells">
+      <label for="gender"> Select your gender:</label>
+      <select name="gender" id="gender" formControlName="gender">
+        <option value="" selected>Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">other</option>
+      </select>
+    </p>
+    <div class="valid">
+      <span
+        *ngIf="fg.controls['gender'].invalid && fg.controls['gender'].touched"
+        >!!---Gender is required--!!</span
+      >
+    </div>
+    <p class="cells">
+      <label
+        >Lab name:
+        <input
+          type="text"
+          placeholder="enter your Lab name"
+          id="labname"
+          formControlName="labname"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span
+        *ngIf="fg.controls['labname'].invalid && fg.controls['labname'].touched"
+        >!!---Lab Name is required--!!</span
+      >
+    </div>
+    <p class="cells">
+      <label
+        >Report number:
+        <input
+          type="text"
+          placeholder="enter your report number"
+          id="report"
+          formControlName="report"
+        />
+      </label>
+    </p>
+    <div class="valid">
+      <span
+        *ngIf="fg.controls['report'].invalid && fg.controls['report'].touched"
+        >!!---Report is required--!!</span
+      >
+    </div>
+    <p class="cells">
+      <label>Result:</label>
+      <select name="Result" id="result" formControlName="result">
+        <option value="" selected>Result</option>
+        <option value="+ve">Positive</option>
+        <option value="-ve">Negative</option>
+      </select>
+    </p>
+    <div class="valid">
+      <span
+        *ngIf="fg.controls['result'].invalid && fg.controls['result'].touched"
+        >!!---Result is required--!!</span
+      >
+    </div>
+
+    <p>
+      <button type="submit" id="btn" (click)="add()" [disabled]="fg.valid">
+        Submit
+      </button>
+    </p>
+  </form>
+  <h1>Records of RT-PCR Test</h1>
+  <br />
+  <table id="table">
+    <tr>
+      <th *ngFor="let column of headers">
+        {{ column }}
+      </th>
+    </tr>
+
+    <tr *ngFor="let value of store">
+      <td>{{ value.name }}</td>
+      <td>{{ value.aadhar }}</td>
+      <td>{{ value.dob }}</td>
+      <td>{{ value.country }}</td>
+      <td>{{ value.datetime }}</td>
+      <td>{{ value.gender }}</td>
+      <td>{{ value.labname }}</td>
+      <td>{{ value.report }}</td>
+      <td>{{ value.result }}</td>
+    </tr>
+  </table>
+  <br />
+  <h1>Here you can search record by Aadhar number</h1>
+  <p class="search">
+    <input
+      type="text"
+      id="find"
+      (keyup)="removefield()"
+      placeholder="enter aadhar number to search"
+    />
+    <input type="submit" (click)="search()" id="submit" value="Search" />
+  </p>
+  <br />
+  <table id="tablesearch">
+    <tr>
+      <th *ngFor="let column of headers">
+        {{ column }}
+      </th>
+    </tr>
+    <tr *ngFor="let value of searchvalue" id="tr">
+      <td>{{ value.name }}</td>
+      <td>{{ value.aadhar }}</td>
+      <td>{{ value.dob }}</td>
+      <td>{{ value.country }}</td>
+      <td>{{ value.datetime }}</td>
+      <td>{{ value.gender }}</td>
+      <td>{{ value.labname }}</td>
+      <td>{{ value.report }}</td>
+      <td>{{ value.result }}</td>
+    </tr>
+  </table>
+</div>

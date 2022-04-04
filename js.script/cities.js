@@ -53,7 +53,7 @@ export function getOptions(data) {
      return Object.entries(data)
        .map(
          ([code, city]) =>
-           `<option value="${code}">${code == 'MSG' ? " " : code}  ${city}</option>`
+           `<option value="${city}">${city == 'MSG' ? " " : city}  ${code}</option>`
        )
        .join("");
    }

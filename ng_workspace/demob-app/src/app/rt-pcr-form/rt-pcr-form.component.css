@@ -1,0 +1,62 @@
+/* h1 {
+      color: rgb(223, 12, 12);
+      justify-content: center;
+  }
+  div input,
+  button {
+      background-color: rgba(219, 26, 26, 0.596);
+      font-size: 16px;
+      line-height: 25px;
+      text-transform: uppercase;
+  }
+  input:focus,
+  button:focus {
+      outline: none;
+  }
+  #table,
+  #tablesearch {
+      border: 3px solid brown;
+      padding: 2px;
+      text-align: center;
+      width: 1350px;
+  }
+  #table tr th,
+  #tablesearch tr th {
+      border: 3px solid brown;
+      margin: 30px;
+  } 
+  label {
+      align-self: center;
+      display: flex;
+      font-weight: bolder;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      padding: 3px;
+      text-align: right;
+      width: 350px;
+  }  
+  .form {
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0%;
+  }  
+  .search {
+      margin-bottom: 40px;
+      margin-top: 10px;
+      text-align: center;
+  }
+  #find {
+      height: 20px;
+      width: 250px;
+  }
+  #submit {
+      background-color: rgba(219, 26, 26, 0.596);
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+  }
+  form , table  {
+      background-color: rgb(218, 121, 121);
+  }
+   */
