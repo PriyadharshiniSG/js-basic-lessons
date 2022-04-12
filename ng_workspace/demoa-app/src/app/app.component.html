@@ -1,16 +1,21 @@
 <h1>Angular framework {{ location }}</h1>
 <hr />
-<div>
+<!--<div>
   <app-boxa
     labelValue="Location"
     [data]="location"
     (onBoxDataChange)="onBoxValueChange($event)"
   ></app-boxa>
-  <!-- inside [] if we define variable then it takes value as property not string  -->
+   // inside [] if we define variable then it takes value as property not string  
 </div>
 <div>
   <app-boxa [data]="location"></app-boxa>
-</div>
-<div>
+</div>-->
+<!-- <div>
   <app-customer-form></app-customer-form>
-</div>
+</div> -->
+<!-- <app-employee-form></app-employee-form> -->
+<!-- <app-book-list></app-book-list> -->
+<!-- <app-book-catlog></app-book-catlog> -->
+<app-menu></app-menu>
+<router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 <div class="data">
   <h1>RT-PCR Online Application</h1>
-  <form class="form" [formGroup]="fg" (ngSubmit)="onSubmit()">
+  <form class="form" [formGroup]="fg">
     <p class="cells">
       <label
         >Person:
@@ -50,10 +50,10 @@
         >!!---dob is required--!!</span
       >
     </div>
-    <!-- <p class="cells">
+    <p class="cells">
       <label
         >City:
-        <select name="City" id="sts" formControlName="city">
+        <select name="City" id="country" formControlName="city">
           <option value="" selected>Select a city</option>
           <option value="">Chennai</option>
           <option value="">Madurai</option>
@@ -67,42 +67,12 @@
         </select>
       </label>
     </p>
-    <div class="valid">
+    <!-- <div class="valid">
       <span *ngIf="fg.controls['city'].invalid && fg.controls['city'].touched"
         >!!---City is required--!!</span
       >
     </div> -->
-    <!-- <p>
-      <label>city :</label>
-       <label class="city" formControlName="city">City</label> -->
-    <!-- <select [(ngModel)]="selectedValue">
-        <option *ngFor="let c of countries" [ngValue]="c">{{ c.name }}</option>
-        <p>Selected Country: {{ selectedCountry?.name }}</p>
-      </select>
-    </p> -->
-    <p [formGroup]="form">
-      City:
-      <select formControlName="country">
-        <option *ngFor="let country of countries" [ngValue]="country">
-          {{ country.name }}
-        </option>
-      </select>
-    </p>
-    <!-- <p class="cells">
-      <label
-        >City:
-        <input
-          type="text"
-          placeholder="enter your city"
-          id="country"
-          formControlName="country"
-        />
-      </label>
-    </p>
-    <div class="valid">
-      <span *ngIf="fg.controls['country'].invalid && fg.controls['country'].touched"
-        >!!---city is required--!!</span
-      > -->
+
     <p class="cells">
       <label
         >Date and time of Test:
@@ -205,7 +175,7 @@
       <td>{{ value.name }}</td>
       <td>{{ value.aadhar }}</td>
       <td>{{ value.dob }}</td>
-      <td>{{ value.country }}</td>
+      <td>{{ value.city }}</td>
       <td>{{ value.datetime }}</td>
       <td>{{ value.gender }}</td>
       <td>{{ value.labname }}</td>
@@ -222,8 +192,9 @@
       (keyup)="removefield()"
       placeholder="enter aadhar number to search"
     />
-    <input type="submit" (click)="search()" id="submit" value="Search" />
+    <input type="submit" (click)="search()" id="submit" />
   </p>
+  <p id="msg"></p>
   <br />
   <table id="tablesearch">
     <tr>
@@ -235,7 +206,7 @@
       <td>{{ value.name }}</td>
       <td>{{ value.aadhar }}</td>
       <td>{{ value.dob }}</td>
-      <td>{{ value.country }}</td>
+      <td>{{ value.city }}</td>
       <td>{{ value.datetime }}</td>
       <td>{{ value.gender }}</td>
       <td>{{ value.labname }}</td>

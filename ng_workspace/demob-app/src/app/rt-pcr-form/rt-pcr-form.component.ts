@@ -14,25 +14,6 @@ export class RtPcrFormComponent implements OnInit {
   input: any;
   headers=["Name","Aadhar Number","Date of Birth","City","Date & Time","Gender", "Labname",
   "Report Number","Result"];
-  countries = [
-    {id: 1, name: "United States"},
-    {id: 2, name: "Australia"},
-    {id: 3, name: "Canada"},
-    {id: 4, name: "Brazil"},
-    {id: 5, name: "England"}
- ];
- form: FormGroup;
-  p: any;
-
-  constructor() {
-    this.form = new FormGroup({
-      country: new FormControl(null)
-    })
-  }
-
-  
-//  selectedValue = null;
-
   searchvalue:any=[];
 
 
@@ -43,42 +24,40 @@ export class RtPcrFormComponent implements OnInit {
   name:new FormControl('',[Validators.required]),
   aadhar:new FormControl('',[Validators.required]),
   dob:new FormControl('',[Validators.required]),
- country:new FormControl('',[Validators.required]),
+  city:new FormControl('',[Validators.required]),
   datetime:new FormControl(),
   gender:new FormControl('',[Validators.required]),
   labname:new FormControl('',[Validators.required]),
   report:new FormControl('',[Validators.required]),
   result:new FormControl('',[Validators.required])
 });
- onSubmit(){
-   console.warn(this.fg.value);
- }
+// onSubmit(){
+//    console.warn(this.fg.value);
+//  }
  
  add(){
   console.log(this.store.push(this.fg.value));
-  console.log(this.store);
+  console.log(this.store); 
   this.fg.reset();
-  (<HTMLDivElement>document.getElementById("msg")).style.display="none";
+  (<HTMLInputElement>document.getElementById("msg")).style.display="none";
 }
   search(){
-    console.log((<HTMLParagraphElement>document.getElementById("find")).innerHTML);
-    if((<HTMLParagraphElement>document.getElementById("find")).innerText==""){
-      (<HTMLParagraphElement>document.getElementById("msg")).innerText="Oops!! No records found in our database🤐🤐";
+    console.log((<HTMLInputElement>document.getElementById("submit")).innerHTML);
+    if((<HTMLInputElement>document.getElementById("find")).innerText==""){
+      (<HTMLInputElement>document.getElementById("msg")).innerText="Oops!! No records found in our database🤐🤐";
     }
-    this.input=(<HTMLInputElement>document.getElementById("find")).innerHTML;
+    this.input=(<HTMLInputElement> document.getElementById("find")).innerHTML;
     this.store.forEach((element:any) => {
-      if(element.aadhar==this.input){
+      if(element.aadhar == this.input){
         this.searchvalue.push(element);
       }
     });
     (<HTMLInputElement>document.getElementById("find")).value="";
   }  
   removefield(){
-    (<HTMLTableRowElement>document.getElementById('tr')).style.display="none";
+   this.searchvalue = [];
 }
-get country(): string {
-  return this.form ? this.p.get('country').value : '';
-}
+
 }
 
 
